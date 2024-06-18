@@ -7,6 +7,10 @@
     width:55vw;
     max-height:500px ;
     max-width: 500px;
+    animation-duration: 10s;
+    animation-name: wheel;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .line{
@@ -46,6 +50,10 @@
     position: absolute;
     border:2px solid;
     transform-origin: 50% 0%;
+    animation-name: cabins;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .cabin:nth-of-type(1){
@@ -76,4 +84,23 @@
 .cabin:nth-of-type(6){
     right:17%;
     top:7%;
+}
+@keyframes wheel{
+    0%{
+      transform: rotate(0deg);  
+    }
+
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes cabins{
+    0%{
+        transform: rotate(0deg);
+        background-color: yellow;
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
 }
